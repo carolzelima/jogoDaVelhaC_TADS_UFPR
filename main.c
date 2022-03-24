@@ -19,14 +19,31 @@ char tabuleiro[3][3];
 escolha = 0;
 dificuldade = 0;
 
-int jogada_usuario(int lin, int col, char jog){//1
+//1
 /* esta função preenche a posição informada pelos parâmetros lin (linha) e col (coluna)
 com ‘X’ ou ‘O’ que são passados para a função através de
-
 parâmetro jog. A função retorna um dos seguintes valores:
 0 – se a jogada é válida
 1 – se a posição informada é inválida
 2 – se a posição informada já está preenchida*/
+int jogada_usuario(int lin, int col, char jog){
+
+    /*0 - validar os parâmetros*/
+    if(lin > 2 || col > 2){
+        return 1;
+    }
+
+    /*1 - Definir a posição*/
+    char posicao = tabuleiro[lin][col];
+
+    /*2 - Marcar o simbolo */
+    if(posicao != ''){
+        return 2;
+    }
+
+    /*3- Mostrar na tela*/
+    tabuleiro [lin][col] = jog;
+    return 0;
 }
 
 void jogada_computador(char jog, int nivel){//2
