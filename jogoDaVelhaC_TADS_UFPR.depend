@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1648703555 source:c:\users\carol\onedrive\documentos\projetos\codeblocks c\jogodavelhac_tads_ufpr\main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+
